@@ -1,23 +1,55 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Shield, HeartPulse, Stethoscope } from "lucide-react";
+import logo from "@/assets/ep-logo.jpg.asset.json";
+import { SiteLayout, meta } from "@/components/SiteLayout";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => meta("My Surgeon — Military & General Surgeon in Greece", "Precise, compassionate surgical care from a military-trained female surgeon. Book a consultation."),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const pillars = [
+  { icon: Shield, title: "Military discipline", text: "Trained under the highest standards of the Armed Forces medical corps." },
+  { icon: Stethoscope, title: "Surgical precision", text: "Modern, minimally invasive techniques for faster recovery." },
+  { icon: HeartPulse, title: "Human care", text: "Clear explanations and personal follow-up at every step." },
+];
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout>
+      <section className="bg-hero text-primary-foreground">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] opacity-80">General & Military Surgeon</p>
+            <h1 className="mt-4 text-5xl leading-tight md:text-7xl">Steady hands.<br /><em>Trusted care.</em></h1>
+            <p className="mt-6 max-w-md text-lg opacity-90">
+              A surgeon shaped by military service — bringing calm, precision and dedication to every patient.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/contact" className="rounded-md bg-silver px-6 py-3 font-semibold text-olive-deep shadow-soft transition-transform hover:-translate-y-0.5">Book a consultation</Link>
+              <Link to="/services" className="rounded-md border border-primary-foreground/50 px-6 py-3 font-semibold transition-colors hover:bg-primary-foreground/10">Services</Link>
+            </div>
+          </div>
+          <img src={logo.url} alt="ΕΠ surgeon logo" className="mx-auto w-full max-w-md rounded-full shadow-soft" />
+        </div>
+      </section>
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid gap-6 md:grid-cols-3">
+          {pillars.map((p) => (
+            <div key={p.title} className="rounded-lg border border-border bg-card p-8 shadow-soft">
+              <p.icon className="h-8 w-8 text-secondary" />
+              <h3 className="mt-4 text-2xl text-olive-deep">{p.title}</h3>
+              <p className="mt-2 text-muted-foreground">{p.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="bg-muted">
+        <div className="mx-auto max-w-4xl px-6 py-20 text-center">
+          <h2 className="text-4xl text-olive-deep md:text-5xl">“Every patient deserves the same care I would give a fellow soldier.”</h2>
+          <Link to="/about" className="mt-8 inline-block font-semibold text-secondary underline-offset-4 hover:underline">Read her story →</Link>
+        </div>
+      </section>
+    </SiteLayout>
   );
 }
