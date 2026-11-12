@@ -3,10 +3,10 @@ import type { ReactNode } from "react";
 import logo from "@/assets/ep-logo.jpg.asset.json";
 
 const nav = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/services", label: "Services" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Αρχική" },
+  { to: "/about", label: "Σχετικά" },
+  { to: "/services", label: "Υπηρεσίες" },
+  { to: "/contact", label: "Επικοινωνία" },
 ] as const;
 
 export function SiteLayout({ children }: { children: ReactNode }) {
@@ -15,8 +15,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo.url} alt="ΕΠ logo" className="h-11 w-11 rounded-full object-cover" />
-            <span className="font-display text-2xl text-olive-deep">my-surgeon.gr</span>
+            <img src={logo.url} alt="Λογότυπο ΕΠ" className="h-11 w-11 rounded-full object-cover" />
+            <span className="flex flex-col leading-tight">
+              <span className="font-display text-2xl text-olive-deep">my-surgeon.gr</span>
+              <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Δρ. Ελένη Παρασκευοπούλου</span>
+            </span>
           </Link>
           <nav className="flex gap-1 text-sm">
             {nav.map((n) => (
@@ -32,7 +35,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <main className="flex-1">{children}</main>
       <footer className="bg-olive-deep text-primary-foreground">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm sm:flex-row sm:justify-between">
-          <span className="font-display text-xl">Dr. Ε. Π. — General & Military Surgeon</span>
+          <span className="font-display text-xl">Δρ. Ελένη Παρασκευοπούλου — Γενική & Στρατιωτική Χειρουργός</span>
           <span className="opacity-80">© {new Date().getFullYear()} my-surgeon.gr</span>
         </div>
       </footer>

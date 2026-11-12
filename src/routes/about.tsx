@@ -2,21 +2,21 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHeader, meta } from "@/components/SiteLayout";
 
 export const Route = createFileRoute("/about")({
-  head: () => meta("About — My Surgeon", "Background, training and military service of our general surgeon."),
+  head: () => meta("Σχετικά — Δρ. Ελένη Παρασκευοπούλου", "Βιογραφικό, εκπαίδευση και στρατιωτική θητεία της Δρ. Ελένης Παρασκευοπούλου, γενικής χειρουργού."),
   component: About,
 });
 
 const timeline = [
-  ["Medical School", "Degree in Medicine, with distinction."],
-  ["Military Service", "Surgeon in the Hellenic Armed Forces medical corps."],
-  ["Specialisation", "General Surgery residency and board certification."],
-  ["Today", "Private practice and hospital surgery across Greece."],
+  ["Ιατρική Σχολή", "Πτυχίο Ιατρικής με διάκριση."],
+  ["Στρατιωτική Θητεία", "Χειρουργός στο ιατρικό σώμα των Ελληνικών Ενόπλων Δυνάμεων."],
+  ["Ειδικότητα", "Ειδίκευση στη Γενική Χειρουργική και τίτλος ειδικότητας."],
+  ["Σήμερα", "Ιδιωτική πρακτική και νοσοκομειακή χειρουργική σε όλη την Ελλάδα."],
 ];
 
 function About() {
   return (
     <SiteLayout>
-      <PageHeader eyebrow="About" title="A surgeon in uniform" intro="Years of service as a military surgeon taught her to stay calm under pressure, decide with clarity and never compromise on care." />
+      <PageHeader eyebrow="Σχετικά" title="Δρ. Ελένη Παρασκευοπούλου" intro="Γενική χειρουργός με στρατιωτική εκπαίδευση. Έμαθε να διατηρεί την ψυχραιμία υπό πίεση, να αποφασίζει με διαύγεια και να μην συμβιβάζεται ποτέ στο επίπεδο της φροντίδας." />
       <section className="mx-auto max-w-3xl px-6 py-20">
         <ol className="space-y-10 border-l-2 border-primary pl-8">
           {timeline.map(([t, d]) => (
