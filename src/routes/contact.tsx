@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const items = [
-  { icon: Phone, label: "Τηλέφωνο", value: "+30 210 000 0000" },
+  { icon: Phone, label: "Τηλέφωνο", value: "6983528105" },
   { icon: Mail, label: "Email", value: "info@my-surgeon.gr" },
   { icon: MapPin, label: "Κλινική", value: "Αθήνα, Ελλάδα" },
 ];
