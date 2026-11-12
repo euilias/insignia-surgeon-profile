@@ -20,7 +20,7 @@ function Index() {
       <section className="bg-hero text-primary-foreground">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] opacity-80">Γενική & Στρατιωτική Χειρουργός</p>
+            <p className="text-xs uppercase tracking-[0.3em] opacity-80">ΓΕΝΙΚΗ ΧΕΙΡΟΥΡΓΟΣ</p>
             <p className="mt-4 font-display text-3xl leading-none md:text-4xl">Δρ. Ελένη Παρασκευοπούλου</p>
             <h1 className="mt-3 text-5xl leading-tight md:text-7xl">Σταθερό χέρι.<br /><em>Έμπιστη φροντίδα.</em></h1>
             <p className="mt-6 max-w-md text-lg opacity-90">
