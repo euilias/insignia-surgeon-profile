@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
 const pillars = [
   { icon: Shield, title: "Στρατιωτική πειθαρχία", text: "Εκπαίδευση σύμφωνα με τους αυστηρότερους κανόνες του ιατρικού σώματος των Ενόπλων Δυνάμεων." },
   { icon: Stethoscope, title: "Χειρουργική ακρίβεια", text: "Σύγχρονες, ελάχιστα επεμβατικές τεχνικές για ταχύτερη ανάρρωση." },
-  { icon: HeartPulse, title: "Ανθρώπινη φροντίδα", text: "Ξεκάθαρες εξηγήσεις και προσωπική παρακολούθηση σε κάθε βήμα." },
+  { icon: HeartPulse, title: "Ανθρώπινη φροντίδα", text: "Καθορισμός χειρουργικών ενδείξεων, ξεκάθαρες εξηγήσεις και προσωπική παρακολούθηση σε κάθε βήμα." },
 ];
 
 function Index() {
@@ -47,7 +47,7 @@ function Index() {
       </section>
       <section className="bg-muted">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
-          <h2 className="text-4xl text-olive-deep md:text-5xl">«Κάθε ασθενής αξίζει τη φροντίδα που θα έδινα σε έναν συμπολεμιστή.»</h2>
+          <h2 className="text-4xl text-olive-deep md:text-5xl">«Κάθε ασθενής αξίζει τη φροντίδα που θα πρόσφερα στον συμπολεμιστή μου.»</h2>
           <Link to="/about" className="mt-8 inline-block font-semibold text-secondary underline-offset-4 hover:underline">Η ιστορία της →</Link>
         </div>
       </section>
