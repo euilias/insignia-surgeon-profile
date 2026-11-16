@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
 const items = [
   { icon: Phone, label: "Τηλέφωνο", value: "6983528105" },
   { icon: Mail, label: "Email", value: "info@my-surgeon.gr" },
-  { icon: MapPin, label: "ΙΑΤΡΕΙΟ", value: "Αθήνα, Ελλάδα" },
+  { icon: MapPin, label: "ΙΑΤΡΕΙΟ", value: "Λεωφ.Κηφισίας 312Α\nΧαλάνδρι, 15232\n2ο Όροφος\n\n\n" },
 ];
 
 function Contact() {
