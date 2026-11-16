@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import logo from "@/assets/ep-logo.jpg.asset.json";
 
 const nav = [
   { to: "/", label: "Αρχική" },
@@ -15,7 +14,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 px-4 py-3 sm:px-6 md:flex-row md:justify-between">
           <Link to="/" className="flex min-w-0 items-center gap-3">
-            <img src={logo.url} alt="Λογότυπο ΕΠ" className="h-11 w-11 shrink-0 rounded-full object-cover" />
+            <img src="/images/ep-logo.jpg" alt="Λογότυπο ΕΠ" className="h-11 w-11 shrink-0 rounded-full object-cover" />
             <span className="flex min-w-0 flex-col leading-tight">
               <span className="font-display text-2xl text-olive-deep">my-surgeon.gr</span>
               <span className="hidden text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:block">ΕΛΕΝΗ ΠΑΡΑΣΚΕΥΟΠΟΥΛΟΥ<br />MD, MSC</span>

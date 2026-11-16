@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shield, HeartPulse, Stethoscope } from "lucide-react";
-import portrait from "@/assets/surgeon-portrait.jpg.asset.json";
 import { SiteLayout, meta } from "@/components/SiteLayout";
 
 export const Route = createFileRoute("/")({
@@ -31,7 +30,7 @@ function Index() {
               <Link to="/services" className="rounded-md border border-primary-foreground/50 px-6 py-3 font-semibold transition-colors hover:bg-primary-foreground/10">Υπηρεσίες</Link>
             </div>
           </div>
-          <img src={portrait.url} alt="Δρ. Ελένη Παρασκευοπούλου, χειρουργός" className="mx-auto w-full max-w-md rounded-full object-cover shadow-soft aspect-square" />
+          <img src="/images/surgeon-portrait.jpg" alt="Δρ. Ελένη Παρασκευοπούλου, χειρουργός" className="mx-auto w-full max-w-md rounded-full object-cover shadow-soft aspect-square" />
         </div>
       </section>
       <section className="mx-auto max-w-6xl px-6 py-20">
