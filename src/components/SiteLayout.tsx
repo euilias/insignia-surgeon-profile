@@ -13,15 +13,15 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={logo.url} alt="Λογότυπο ΕΠ" className="h-11 w-11 rounded-full object-cover" />
-            <span className="flex flex-col leading-tight">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 px-4 py-3 sm:px-6 md:flex-row md:justify-between">
+          <Link to="/" className="flex min-w-0 items-center gap-3">
+            <img src={logo.url} alt="Λογότυπο ΕΠ" className="h-11 w-11 shrink-0 rounded-full object-cover" />
+            <span className="flex min-w-0 flex-col leading-tight">
               <span className="font-display text-2xl text-olive-deep">my-surgeon.gr</span>
-              <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">ΕΛΕΝΗ ΠΑΡΑΣΚΕΥΟΠΟΥΛΟΥ<br />MD, MSC</span>
+              <span className="hidden text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:block">ΕΛΕΝΗ ΠΑΡΑΣΚΕΥΟΠΟΥΛΟΥ<br />MD, MSC</span>
             </span>
           </Link>
-          <nav className="flex gap-1 text-sm">
+          <nav className="flex flex-wrap justify-center gap-1 text-sm">
             {nav.map((n) => (
               <Link key={n.to} to={n.to} activeOptions={{ exact: true }}
                 className="rounded-md px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
@@ -46,9 +46,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) {
   return (
     <section className="bg-hero text-primary-foreground">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <p className="text-xs uppercase tracking-[0.3em] opacity-80">{eyebrow}</p>
-        <h1 className="mt-3 text-5xl md:text-6xl">{title}</h1>
+        <h1 className="mt-3 text-4xl md:text-6xl">{title}</h1>
         <p className="mt-4 max-w-2xl text-lg opacity-90">{intro}</p>
       </div>
     </section>

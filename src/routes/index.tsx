@@ -22,7 +22,7 @@ function Index() {
           <div>
             <p className="text-xs uppercase tracking-[0.3em] opacity-80">ΓΕΝΙΚΗ ΧΕΙΡΟΥΡΓΟΣ</p>
             <p className="mt-4 font-display text-3xl leading-none md:text-4xl">Ελένη Παρασκευοπούλου<br />MD, MSc</p>
-            <h1 className="mt-3 text-5xl leading-tight md:text-7xl">Σταθερό χέρι.<br /><em>Έμπιστη φροντίδα.</em></h1>
+            <h1 className="mt-3 text-4xl leading-tight md:text-7xl">Σταθερό χέρι.<br /><em>Έμπιστη φροντίδα.</em></h1>
             <p className="mt-6 max-w-md text-lg opacity-90">
               Χειρουργός με στρατιωτική εκπαίδευση — ψυχραιμία, ακρίβεια και αφοσίωση σε κάθε ασθενή.
             </p>
@@ -47,7 +47,7 @@ function Index() {
       </section>
       <section className="bg-muted">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
-          <h2 className="text-4xl text-olive-deep md:text-5xl">«Κάθε ασθενής αξίζει τη φροντίδα που θα πρόσφερα στον συμπολεμιστή μου.»</h2>
+          <h2 className="text-3xl text-olive-deep md:text-5xl">«Κάθε ασθενής αξίζει τη φροντίδα που θα πρόσφερα στον συμπολεμιστή μου.»</h2>
           <Link to="/about" className="mt-8 inline-block font-semibold text-secondary underline-offset-4 hover:underline">Η ιστορία της →</Link>
         </div>
       </section>
