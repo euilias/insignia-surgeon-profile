@@ -16,7 +16,7 @@ const items = [
 function Contact() {
   return (
     <SiteLayout>
-      <PageHeader eyebrow="Επικοινωνία" title="Κλείστε ραντεβού" intro="Καλέστε ή στείλτε email για να κλείσετε ραντεβού. Τα επείγοντα περιστατικά εξετάζονται το συντομότερο δυνατό." />
+      <PageHeader eyebrow="Επικοινωνία" title="Κλείστε ραντεβού" intro={"Καλέστε μας ή στείλτε email για να κλείσετε το ραντεβού σας.\u00a0\nΤα επείγοντα περιστατικά εξετάζονται το συντομότερο δυνατό."} />
       <section className="mx-auto grid max-w-4xl gap-6 px-6 py-20 md:grid-cols-3">
         {items.map((i) => (
           <div key={i.label} className="rounded-lg border border-border bg-card p-8 text-center shadow-soft">
