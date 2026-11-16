@@ -15,7 +15,7 @@ const items = [
 
 const socials = [
   { icon: Facebook, label: "Facebook", handle: "my-surgeon.gr", href: "https://www.facebook.com/my-surgeon.gr" },
-  { icon: Instagram, label: "Instagram", handle: "@my_surgeon.gr\n", href: "https://www.instagram.com/my_surgeon" },
+  { icon: Instagram, label: "Instagram", handle: "@my_surgeon.gr", href: "https://www.instagram.com/my_surgeon.gr" },
 ];
 
 function Contact() {
