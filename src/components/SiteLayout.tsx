@@ -18,7 +18,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <img src={logo.url} alt="Λογότυπο ΕΠ" className="h-11 w-11 rounded-full object-cover" />
             <span className="flex flex-col leading-tight">
               <span className="font-display text-2xl text-olive-deep">my-surgeon.gr</span>
-              <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Δρ. Ελένη Παρασκευοπούλου</span>
+              <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">ΕΛΕΝΗ ΠΑΡΑΣΚΕΥΟΠΟΥΛΟΥ MD MSC</span>
             </span>
           </Link>
           <nav className="flex gap-1 text-sm">
