@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { SiteLayout, PageHeader, meta } from "@/components/SiteLayout";
 
 export const Route = createFileRoute("/contact")({
@@ -10,7 +10,12 @@ export const Route = createFileRoute("/contact")({
 const items = [
   { icon: Phone, label: "Τηλέφωνο", value: "6983528105" },
   { icon: Mail, label: "Email", value: "info@my-surgeon.gr" },
-  { icon: MapPin, label: "ΙΑΤΡΕΙΟ", value: "Λεωφ.Κηφισίας 312Α\nΧαλάνδρι, 15232\n2ο Όροφος\n\n\n" },
+  { icon: MapPin, label: "ΙΑΤΡΕΙΟ", value: "Λεωφ.Κηφισίας 312Α\nΧαλάνδρι, 15232\n2ο Όροφος" },
+];
+
+const socials = [
+  { icon: Facebook, label: "Facebook", handle: "my-surgeon.gr", href: "https://www.facebook.com/my-surgeon.gr" },
+  { icon: Instagram, label: "Instagram", handle: "@my_surgeon", href: "https://www.instagram.com/my_surgeon" },
 ];
 
 function Contact() {
@@ -22,9 +27,26 @@ function Contact() {
           <div key={i.label} className="rounded-lg border border-border bg-card p-8 text-center shadow-soft">
             <i.icon className="mx-auto h-7 w-7 text-secondary" />
             <p className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">{i.label}</p>
-            <p className="mt-1 font-semibold text-olive-deep">{i.value}</p>
+            <p className="mt-1 whitespace-pre-line font-semibold text-olive-deep">{i.value}</p>
           </div>
         ))}
+      </section>
+      <section className="mx-auto max-w-4xl px-6 pb-20">
+        <h2 className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">Ακολουθήστε μας</h2>
+        <div className="mt-5 grid gap-6 sm:grid-cols-2">
+          {socials.map((s) => (
+            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+              className="group flex items-center gap-4 rounded-lg border border-border bg-card p-6 shadow-soft transition-colors hover:border-secondary">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-muted">
+                <s.icon className="h-5 w-5 text-secondary" />
+              </span>
+              <span className="flex flex-col leading-tight">
+                <span className="text-[11px] uppercase tracking-widest text-muted-foreground">{s.label}</span>
+                <span className="font-semibold text-olive-deep">{s.handle}</span>
+              </span>
+            </a>
+          ))}
+        </div>
       </section>
     </SiteLayout>
   );
