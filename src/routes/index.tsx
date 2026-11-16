@@ -21,7 +21,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] opacity-80">ΓΕΝΙΚΗ ΧΕΙΡΟΥΡΓΟΣ</p>
-            <p className="mt-4 font-display text-3xl leading-none md:text-4xl">Δρ. Ελένη Παρασκευοπούλου</p>
+            <p className="mt-4 font-display text-3xl leading-none md:text-4xl">Ελένη Παρασκευοπούλου<br />MD, MSc</p>
             <h1 className="mt-3 text-5xl leading-tight md:text-7xl">Σταθερό χέρι.<br /><em>Έμπιστη φροντίδα.</em></h1>
             <p className="mt-6 max-w-md text-lg opacity-90">
               Χειρουργός με στρατιωτική εκπαίδευση — ψυχραιμία, ακρίβεια και αφοσίωση σε κάθε ασθενή.
