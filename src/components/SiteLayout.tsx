@@ -34,7 +34,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <main className="flex-1">{children}</main>
       <footer className="bg-olive-deep text-primary-foreground">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm sm:flex-row sm:justify-between">
-          <span className="font-display text-xl">Ελένη Παρασκευοπούλου MD, MSc — Γενική & Στρατιωτική Χειρουργός</span>
+          <span className="font-display text-xl">Ελένη Παρασκευοπούλου MD, MSc — Χειρουργός - Στρατιωτικός Ιατρός</span>
           <span className="opacity-80">© {new Date().getFullYear()} my-surgeon.gr</span>
         </div>
       </footer>
