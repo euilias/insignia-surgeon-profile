@@ -8,9 +8,9 @@ export const Route = createFileRoute("/contact")({
 });
 
 const items = [
-  { icon: Phone, label: "Τηλέφωνο", value: "6983528105" },
-  { icon: Mail, label: "Email", value: "info@my-surgeon.gr" },
-  { icon: MapPin, label: "ΙΑΤΡΕΙΟ", value: "Λεωφ.Κηφισίας 312Α\nΧαλάνδρι, 15232\n2ο Όροφος" },
+  { icon: Phone, label: "Τηλέφωνο", value: "6983528105", href: "tel:+306983528105" },
+  { icon: Mail, label: "Email", value: "info@my-surgeon.gr", href: "mailto:info@my-surgeon.gr" },
+  { icon: MapPin, label: "ΙΑΤΡΕΙΟ", value: "Λεωφ.Κηφισίας 312Α\nΧαλάνδρι, 15232\n2ο Όροφος", href: "" },
 ];
 
 const socials = [
@@ -27,7 +27,14 @@ function Contact() {
           <div key={i.label} className="rounded-lg border border-border bg-card p-8 text-center shadow-soft">
             <i.icon className="mx-auto h-7 w-7 text-secondary" />
             <p className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">{i.label}</p>
-            <p className="mt-1 whitespace-pre-line font-semibold text-olive-deep">{i.value}</p>
+            {i.href ? (
+              <a href={i.href}
+                className="mt-1 block font-semibold text-olive-deep underline-offset-4 transition-opacity hover:opacity-70 hover:underline">
+                {i.value}
+              </a>
+            ) : (
+              <p className="mt-1 whitespace-pre-line font-semibold text-olive-deep">{i.value}</p>
+            )}
           </div>
         ))}
       </section>
